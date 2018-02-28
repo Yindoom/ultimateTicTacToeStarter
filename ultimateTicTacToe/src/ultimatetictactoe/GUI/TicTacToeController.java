@@ -86,26 +86,26 @@ public class TicTacToeController implements Initializable {
         GridY = Integer.parseInt(parts[1]);    
         
         switch (GridX) { 
-            case '0':
+            case 0:
                  switch (GridY){
-                     case '0': StackPane.setAlignment(subGrid, Pos.TOP_LEFT); break; 
-                     case '1': StackPane.setAlignment(subGrid, Pos.CENTER_LEFT); break; 
-                     case '2': StackPane.setAlignment(subGrid, Pos.BOTTOM_LEFT); break; 
+                     case 0: StackPane.setAlignment(subGrid, Pos.TOP_LEFT); break; 
+                     case 1: StackPane.setAlignment(subGrid, Pos.CENTER_LEFT); break; 
+                     case 2: StackPane.setAlignment(subGrid, Pos.BOTTOM_LEFT); break; 
                 }
 
             break;
-            case '1':
+            case 1:
                  switch (GridY){
-                     case '0': StackPane.setAlignment(subGrid, Pos.TOP_CENTER); break; 
-                     case '1': StackPane.setAlignment(subGrid, Pos.CENTER); break; 
-                     case '2': StackPane.setAlignment(subGrid, Pos.BOTTOM_CENTER); break; 
+                     case 0: StackPane.setAlignment(subGrid, Pos.TOP_CENTER); break; 
+                     case 1: StackPane.setAlignment(subGrid, Pos.CENTER); break; 
+                     case 2: StackPane.setAlignment(subGrid, Pos.BOTTOM_CENTER); break; 
                 }
                 break;
-            case '2':
+            case 2:
                  switch (GridY){
-                     case '0': StackPane.setAlignment(subGrid, Pos.TOP_RIGHT); break; 
-                     case '1': StackPane.setAlignment(subGrid, Pos.CENTER_RIGHT); break; 
-                     case '2': StackPane.setAlignment(subGrid, Pos.BOTTOM_RIGHT); break; 
+                     case 0: StackPane.setAlignment(subGrid, Pos.TOP_RIGHT); break; 
+                     case 1: StackPane.setAlignment(subGrid, Pos.CENTER_RIGHT); break; 
+                     case 2: StackPane.setAlignment(subGrid, Pos.BOTTOM_RIGHT); break; 
                 }
                 break;
          }
