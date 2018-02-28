@@ -1,6 +1,6 @@
-package interfaces;
+package ultimatetictactoe.BLL;
 
-import interfaces.IMove;
+import ultimatetictactoe.BLL.IMove;
 
 /**
  *

@@ -1,6 +1,6 @@
-package interfaces;
+package ultimatetictactoe.BLL;
 
-import interfaces.IField;
+import ultimatetictactoe.BLL.IField;
 
 /**
  *

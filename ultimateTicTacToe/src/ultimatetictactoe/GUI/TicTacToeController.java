@@ -7,7 +7,6 @@ package ultimatetictactoe.GUI;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -15,10 +14,8 @@ import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.input.DragEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 
@@ -115,12 +112,50 @@ public class TicTacToeController implements Initializable {
 
     @FXML
     private void dragExit(MouseEvent event) {
-        /* not used needs to be deleted*/
+        /* not u    @FXML
+    private void clickTile(ActionEvent event) {
+    }
+
+    @FXML
+    private void mouseExit(MouseEvent event) {
+    }
+
+sed needs to be deleted*/
     }
 
     @FXML
     private void mouseExit(MouseEvent event) {
         subGrid.toBack();
+    }
+
+    @FXML
+    private void clickTile(ActionEvent event) {
+//        try
+//        {
+//            Integer row = GridPane.getRowIndex((Node) event.getSource());
+//            Integer col = GridPane.getColumnIndex((Node) event.getSource());
+//            int r = (row == null) ? 0 : row;
+//            int c = (col == null) ? 0 : col;
+//            int player = game.getNextPlayer();
+//            if (game.play(c, r))
+//            {
+//                if (game.isGameOver())
+//                {
+//                    int winner = game.getWinner();
+//                    displayWinner(winner);
+//                }
+//                else
+//                {
+//                    Button btn = (Button) event.getSource();
+//                    String xOrO = player == 0 ? "X" : "O";
+//                    btn.setText(xOrO);
+//                    setPlayer();
+//                }
+//            }
+//        } catch (Exception e)
+//        {
+//            System.out.println(e.getMessage());
+//        } 
     }
 
 

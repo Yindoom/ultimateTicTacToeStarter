@@ -1,8 +1,8 @@
 
-package interfaces;
+package ultimatetictactoe.BLL;
 
-import interfaces.IBot;
-import interfaces.IMove;
+import ultimatetictactoe.BLL.IBot;
+import ultimatetictactoe.BLL.IMove;
 
 /**
  * This is a proposed GameManager for Ultimate Tic-Tac-Toe,

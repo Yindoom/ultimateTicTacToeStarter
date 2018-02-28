@@ -1,7 +1,7 @@
-package interfaces;
+package ultimatetictactoe.BLL;
 
 import java.util.List;
-import interfaces.IMove;
+import ultimatetictactoe.BLL.IMove;
 
 /**
  *
