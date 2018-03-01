@@ -15,7 +15,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import ultimatetictactoe.BLL.GameManager;
 import static ultimatetictactoe.BLL.GameManager.GameMode.HumanVsHuman;
+import ultimatetictactoe.BLL.IGameState;
 
 /**
  * FXML Controller class

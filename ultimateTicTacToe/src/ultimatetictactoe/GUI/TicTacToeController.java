@@ -83,32 +83,36 @@ public class TicTacToeController implements Initializable {
         GridX = Integer.parseInt(parts[2]);
         GridY = Integer.parseInt(parts[1]);    
         
-        switch (GridY) { 
+        //<editor-fold defaultstate="collapsed" desc="switch method for alignment of the grid when mouseover">
+        switch (GridY) {
             case 0:
-                 switch (GridX){
-                     case 0: StackPane.setAlignment(subGrid, Pos.TOP_LEFT); break; 
-                     case 1: StackPane.setAlignment(subGrid, Pos.CENTER_LEFT); break; 
-                     case 2: StackPane.setAlignment(subGrid, Pos.BOTTOM_LEFT); break; 
+                switch (GridX){
+                    case 0: StackPane.setAlignment(subGrid, Pos.TOP_LEFT); break;
+                    case 1: StackPane.setAlignment(subGrid, Pos.CENTER_LEFT); break;
+                    case 2: StackPane.setAlignment(subGrid, Pos.BOTTOM_LEFT); break;
                 }
-
-            break;
+                
+                break;
             case 1:
-                 switch (GridX){
-                     case 0: StackPane.setAlignment(subGrid, Pos.TOP_CENTER); break; 
-                     case 1: StackPane.setAlignment(subGrid, Pos.CENTER); break; 
-                     case 2: StackPane.setAlignment(subGrid, Pos.BOTTOM_CENTER); break; 
+                switch (GridX){
+                    case 0: StackPane.setAlignment(subGrid, Pos.TOP_CENTER); break;
+                    case 1: StackPane.setAlignment(subGrid, Pos.CENTER); break;
+                    case 2: StackPane.setAlignment(subGrid, Pos.BOTTOM_CENTER); break;
                 }
                 break;
             case 2:
-                 switch (GridX){
-                     case 0: StackPane.setAlignment(subGrid, Pos.TOP_RIGHT); break; 
-                     case 1: StackPane.setAlignment(subGrid, Pos.CENTER_RIGHT); break; 
-                     case 2: StackPane.setAlignment(subGrid, Pos.BOTTOM_RIGHT); break; 
+                switch (GridX){
+                    case 0: StackPane.setAlignment(subGrid, Pos.TOP_RIGHT); break;
+                    case 1: StackPane.setAlignment(subGrid, Pos.CENTER_RIGHT); break;
+                    case 2: StackPane.setAlignment(subGrid, Pos.BOTTOM_RIGHT); break;
                 }
                 break;
-         }
+        }
         
-        subGrid.toFront();  
+        
+//</editor-fold>
+
+        subGrid.toFront();
     }
 
     @FXML
