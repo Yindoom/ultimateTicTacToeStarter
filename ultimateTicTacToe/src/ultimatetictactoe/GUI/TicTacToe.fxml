@@ -47,10 +47,7 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-<<<<<<< HEAD
                   <Button disable="true" mnemonicParsing="false" prefHeight="136.0" prefWidth="280.0" />
-=======
->>>>>>> Fabio's-tree
                   <GridPane fx:id="grid_0_0" gridLinesVisible="true" onMouseEntered="#dragOver" onMouseExited="#dragExit" opacity="0.5" prefHeight="100.0" prefWidth="100.0">
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -77,11 +74,8 @@
                         <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                      </children>
                   </GridPane>
-<<<<<<< HEAD
                   <Button disable="true" mnemonicParsing="false" prefHeight="136.0" prefWidth="280.0" GridPane.columnIndex="1" />
                   <GridPane fx:id="grid_1_0" gridLinesVisible="true" onMouseEntered="#dragOver" onMouseExited="#dragExit" opacity="0.5" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="1">
-=======
->>>>>>> Fabio's-tree
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -109,7 +103,6 @@
                   </GridPane>
                   <Button disable="true" mnemonicParsing="false" prefHeight="136.0" prefWidth="280.0" GridPane.columnIndex="2" />
                   <GridPane fx:id="grid_2_0" gridLinesVisible="true" onMouseEntered="#dragOver" onMouseExited="#dragExit" opacity="0.5" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="2">
-=======
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -137,8 +130,6 @@
                   </GridPane>
                   <Button disable="true" mnemonicParsing="false" prefHeight="136.0" prefWidth="280.0" GridPane.rowIndex="1" />
                   <GridPane fx:id="grid_0_1" gridLinesVisible="true" onMouseEntered="#dragOver" onMouseExited="#dragExit" opacity="0.5" prefHeight="100.0" prefWidth="100.0" GridPane.rowIndex="1">
-=======
->>>>>>> Fabio's-tree
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -164,11 +155,8 @@
                         <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                      </children>
                   </GridPane>
-<<<<<<< HEAD
                   <Button disable="true" mnemonicParsing="false" prefHeight="136.0" prefWidth="280.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <GridPane fx:id="grid_1_1" gridLinesVisible="true" onMouseEntered="#dragOver" onMouseExited="#dragExit" opacity="0.5" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-=======
->>>>>>> Fabio's-tree
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -194,10 +182,7 @@
                         <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                      </children>
                   </GridPane>
-<<<<<<< HEAD
                   <Button disable="true" mnemonicParsing="false" prefHeight="136.0" prefWidth="280.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-=======
->>>>>>> Fabio's-tree
                   <GridPane fx:id="grid_2_1" gridLinesVisible="true" onMouseEntered="#dragOver" onMouseExited="#dragExit" opacity="0.5" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -224,10 +209,7 @@
                         <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                      </children>
                   </GridPane>
-<<<<<<< HEAD
                   <Button disable="true" mnemonicParsing="false" prefHeight="136.0" prefWidth="280.0" GridPane.rowIndex="2" />
-=======
->>>>>>> Fabio's-tree
                   <GridPane fx:id="grid_0_2" gridLinesVisible="true" onMouseEntered="#dragOver" onMouseExited="#dragExit" opacity="0.5" prefHeight="100.0" prefWidth="100.0" GridPane.rowIndex="2">
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -254,10 +236,7 @@
                         <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                      </children>
                   </GridPane>
-<<<<<<< HEAD
                   <Button disable="true" mnemonicParsing="false" prefHeight="136.0" prefWidth="280.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-=======
->>>>>>> Fabio's-tree
                   <GridPane fx:id="grid_1_2" gridLinesVisible="true" onMouseEntered="#dragOver" onMouseExited="#dragExit" opacity="0.5" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -284,10 +263,7 @@
                         <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                      </children>
                   </GridPane>
-<<<<<<< HEAD
                   <Button disable="true" mnemonicParsing="false" prefHeight="136.0" prefWidth="280.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-=======
->>>>>>> Fabio's-tree
                   <GridPane fx:id="grid_2_2" gridLinesVisible="true" onMouseEntered="#dragOver" onMouseExited="#dragExit" opacity="0.5" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
