@@ -7,6 +7,7 @@ package ultimatetictactoe.GUI;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -31,6 +32,8 @@ public class TicTacToeController implements Initializable {
     //save the coordinates X,Y of the grid
     private int GridX;
     private int GridY;
+    
+    Node n;
     
     private Label label;
     @FXML
@@ -77,7 +80,7 @@ public class TicTacToeController implements Initializable {
     @FXML
     private void dragOver(MouseEvent event) {
         
-        Node n = (Node)event.getSource();
+        n = (Node)event.getSource();
         String id = n.getId();
         String[] parts = id.split("_");
         GridX = Integer.parseInt(parts[2]);
@@ -163,6 +166,30 @@ sed needs to be deleted*/
 //        } 
             Integer row = GridPane.getRowIndex((Node) event.getSource());
             Integer col = GridPane.getColumnIndex((Node) event.getSource());
+//            if(row == null)
+//                row = 0;
+//            if(col == null)
+              //  col = 0;
+            System.out.println("" + row +" " + col);
+            
+            Integer row2 = GridPane.getRowIndex(n);
+            Integer col2 = GridPane.getColumnIndex(n);
+//            if(row2 == null)
+//                row2 = 0;
+//            if(col2 == null)
+                //col2 = 0;
+            System.out.println(""+row2+ " "+ col2);
+            Node x = null;
+            ObservableList<Node> children = MainGrid.getChildren();
+            for (Node node : children) {
+            if(GridPane.getRowIndex(node) == row && GridPane.getColumnIndex(node) == col) {
+                x = node;
+                node.setId("penis");
+                System.out.println(node.getId());
+            }
+                    
+        }
+            
             
     }
 
