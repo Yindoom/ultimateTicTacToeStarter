@@ -24,8 +24,7 @@ import ultimatetictactoe.BLL.GameManager;
  * @author Yindo
  */
 public class TicTacToeController implements Initializable {
-    
-    TicTacModel model;
+
     
     private Node parentNode; // variable to save its parent
     
@@ -160,12 +159,7 @@ sed needs to be deleted*/
 //        } 
             Integer row = GridPane.getRowIndex((Node) event.getSource());
             Integer col = GridPane.getColumnIndex((Node) event.getSource());
-            model.makeMove(row, col);
             
-    }
-
-    void setModel(TicTacModel model) {
-            this.model = model;
     }
 
     void setGm(GameManager.GameMode gameMode) {
