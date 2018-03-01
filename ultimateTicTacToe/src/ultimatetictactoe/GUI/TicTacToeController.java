@@ -156,6 +156,10 @@ sed needs to be deleted*/
 //        {
 //            System.out.println(e.getMessage());
 //        } 
+            Integer row = GridPane.getRowIndex((Node) event.getSource());
+            Integer col = GridPane.getColumnIndex((Node) event.getSource());
+            System.out.println(""+row+ ""+col);
+            
     }
 
 

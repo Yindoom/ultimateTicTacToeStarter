@@ -39,11 +39,9 @@ public class StartScreenController implements Initializable {
     private void clickHvH(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("TicTacToe.fxml"));
         
+        
         Scene scene = new Scene(root);
         Stage stage = new Stage();
-        
-        GameManager gm = new GameManager(IGameState);
-        gm.
         
         stage.setScene(scene);
         stage.show();
