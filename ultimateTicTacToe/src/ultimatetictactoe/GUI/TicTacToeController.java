@@ -109,7 +109,7 @@ public class TicTacToeController implements Initializable {
                 break;
          }
         
-        subGrid.toFront();    
+        subGrid.toFront();  
     }
 
     @FXML

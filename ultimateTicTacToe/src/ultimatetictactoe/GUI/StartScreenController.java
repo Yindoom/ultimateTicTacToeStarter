@@ -40,13 +40,14 @@ public class StartScreenController implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("TicTacToe.fxml"));
         TicTacToeController ttc = new TicTacToeController();
         ttc.setGm(HumanVsHuman);
+        /*Parent root = FXMLLoader.load(getClass().getResource("TicTacToe.fxml"));
         
         
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         
         stage.setScene(scene);
-        stage.show();
+        stage.show();*/
     }
 
     @FXML
