@@ -37,14 +37,14 @@ public class StartScreenController implements Initializable {
 
     @FXML
     private void clickHvH(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("TicTacToe.fxml"));
+        /*Parent root = FXMLLoader.load(getClass().getResource("TicTacToe.fxml"));
         
         
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         
         stage.setScene(scene);
-        stage.show();
+        stage.show();*/
     }
 
     @FXML
