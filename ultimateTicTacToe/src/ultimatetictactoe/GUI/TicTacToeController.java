@@ -58,6 +58,24 @@ public class TicTacToeController implements Initializable {
     private StackPane SPane;
     @FXML
     private GridPane subGrid;
+    @FXML
+    private Button btn0_0;
+    @FXML
+    private Button btn1_0;
+    @FXML
+    private Button btn2_0;
+    @FXML
+    private Button btn0_1;
+    @FXML
+    private Button btn1_1;
+    @FXML
+    private Button btn2_1;
+    @FXML
+    private Button btn0_2;
+    @FXML
+    private Button button1_2;
+    @FXML
+    private Button btn2_2;
     
     private void handleButtonAction(ActionEvent event) {
         
