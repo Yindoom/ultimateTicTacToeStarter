@@ -12,18 +12,20 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
+import ultimatetictactoe.BLL.GameManager;
 
 /**
  *
  * @author Yindo
  */
 public class TicTacToeController implements Initializable {
+    
+    TicTacModel model;
     
     private Node parentNode; // variable to save its parent
     
@@ -158,8 +160,16 @@ sed needs to be deleted*/
 //        } 
             Integer row = GridPane.getRowIndex((Node) event.getSource());
             Integer col = GridPane.getColumnIndex((Node) event.getSource());
-            System.out.println(""+row+ ""+col);
+            model.makeMove(row, col);
             
+    }
+
+    void setModel(TicTacModel model) {
+            this.model = model;
+    }
+
+    void setGm(GameManager.GameMode gameMode) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 
