@@ -16,8 +16,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import ultimatetictactoe.BLL.GameManager;
-import static ultimatetictactoe.BLL.GameManager.GameMode.HumanVsHuman;
-import ultimatetictactoe.BLL.IGameState;
+import ultimatetictactoe.BLL.GameState;
 
 /**
  * FXML Controller class
@@ -40,8 +39,8 @@ public class StartScreenController implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("TicTacToe.fxml"));
         TicTacToeController ttc = new TicTacToeController();
        
-        
-        
+        GameManager gm = new GameManager(new GameState());
+        ttc.setGm(gm);
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         

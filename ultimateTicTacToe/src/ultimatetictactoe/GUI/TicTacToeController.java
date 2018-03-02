@@ -30,6 +30,7 @@ import ultimatetictactoe.BLL.GameManager;
  */
 public class TicTacToeController implements Initializable {
 
+    GameManager gm;
     
     private Node parentNode; // variable to save its parent
     
@@ -162,7 +163,8 @@ public class TicTacToeController implements Initializable {
         int index = 0;
         
         for (Node node : smallGridChildren) {
-   
+            if(node.getClass()==Button.class)
+            {
             Button smallButton = (Button) node;
                 if(smallButton.getText()== "X" || smallButton.getText()== "O") {
                     
@@ -171,9 +173,9 @@ public class TicTacToeController implements Initializable {
                     subButton.setText(smallButton.getText());
                 }
             index++;
-            if(index == 9) // i dont understand why the gridpane has an extra children it should be only 9 buttons.... ask teacher
-                break; // if i dont stop the loop on its 9th node it will run the for loop again and show "javafx.scene.Group cannot be cast to javafx.scene.control.Button" exception
-        }
+          //  if(index == 9) // i dont understand why the gridpane has an extra children it should be only 9 buttons.... ask teacher
+            //    break; // if i dont stop the loop on its 9th node it will run the for loop again and show "javafx.scene.Group cannot be cast to javafx.scene.control.Button" exception
+        }}
         
         subGrid.toFront();
     }
@@ -238,8 +240,8 @@ sed needs to be deleted*/
         }        
     }
 
-    public void setGm(GameManager.GameMode gameMode) {
-        
+    public void setGm(GameManager gm) {
+        this.gm = gm;
     }
 
 
