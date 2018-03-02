@@ -6,6 +6,7 @@
 package ultimatetictactoe.GUI;
 
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -13,11 +14,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.text.Font;
+import sun.security.x509.X400Address;
 import ultimatetictactoe.BLL.GameManager;
 
 /**
@@ -35,7 +39,6 @@ public class TicTacToeController implements Initializable {
     
     Node n;
     
-    private Label label;
     @FXML
     private GridPane MainGrid;
     @FXML
@@ -62,6 +65,27 @@ public class TicTacToeController implements Initializable {
     private StackPane SPane;
     @FXML
     private GridPane subGrid;
+    @FXML
+    private Button btn0_0;
+    @FXML
+    private Button btn1_0;
+    @FXML
+    private Button btn2_0;
+    @FXML
+    private Button btn0_1;
+    @FXML
+    private Button btn1_1;
+    @FXML
+    private Button btn2_1;
+    @FXML
+    private Button btn0_2;
+    @FXML
+    private Button button1_2;
+    @FXML
+    private Button btn2_2;
+    
+    private String XorO = "X";
+    
     
     private void handleButtonAction(ActionEvent event) {
         
@@ -115,6 +139,42 @@ public class TicTacToeController implements Initializable {
         
 //</editor-fold>
 
+
+        
+        
+        GridPane smallGrid = (GridPane) n;
+        
+        ObservableList<Node> smallGridChildren = smallGrid.getChildren();
+        ObservableList<Node> subGridChildren = subGrid.getChildren();
+        
+        
+        
+         
+        int counter = 0;
+        for (Node node : subGridChildren) {
+            counter++;
+            Button subButton = (Button) node;
+            subButton.setText(null);
+            if(counter == 9)
+                break;
+        }
+        
+        int index = 0;
+        
+        for (Node node : smallGridChildren) {
+   
+            Button smallButton = (Button) node;
+                if(smallButton.getText()== "X" || smallButton.getText()== "O") {
+                    
+                    Button subButton = (Button) subGridChildren.get(index);
+                    subButton.setFont(Font.font(30));
+                    subButton.setText(smallButton.getText());
+                }
+            index++;
+            if(index == 9) // i dont understand why the gridpane has an extra children it should be only 9 buttons.... ask teacher
+                break; // if i dont stop the loop on its 9th node it will run the for loop again and show "javafx.scene.Group cannot be cast to javafx.scene.control.Button" exception
+        }
+        
         subGrid.toFront();
     }
 
@@ -137,64 +197,49 @@ sed needs to be deleted*/
     }
 
     @FXML
-    private void clickTile(ActionEvent event) {
-//        try
-//        {
-//            Integer row = GridPane.getRowIndex((Node) event.getSource());
-//            Integer col = GridPane.getColumnIndex((Node) event.getSource());
-//            int r = (row == null) ? 0 : row;
-//            int c = (col == null) ? 0 : col;
-//            int player = game.getNextPlayer();
-//            if (game.play(c, r))
-//            {
-//                if (game.isGameOver())
-//                {
-//                    int winner = game.getWinner();
-//                    displayWinner(winner);
-//                }
-//                else
-//                {
-//                    Button btn = (Button) event.getSource();
-//                    String xOrO = player == 0 ? "X" : "O";
-//                    btn.setText(xOrO);
-//                    setPlayer();
-//                }
-//            }
-//        } catch (Exception e)
-//        {
-//            System.out.println(e.getMessage());
-//        } 
-            Integer row = GridPane.getRowIndex((Node) event.getSource());
-            Integer col = GridPane.getColumnIndex((Node) event.getSource());
-//            if(row == null)
-//                row = 0;
-//            if(col == null)
-              //  col = 0;
-            System.out.println("" + row +" " + col);
-            
-            Integer row2 = GridPane.getRowIndex(n);
-            Integer col2 = GridPane.getColumnIndex(n);
-//            if(row2 == null)
-//                row2 = 0;
-//            if(col2 == null)
-                //col2 = 0;
-            System.out.println(""+row2+ " "+ col2);
-            Node x = null;
-            ObservableList<Node> children = MainGrid.getChildren();
-            for (Node node : children) {
-            if(GridPane.getRowIndex(node) == row && GridPane.getColumnIndex(node) == col) {
-                x = node;
-                node.setId("penis");
-                System.out.println(node.getId());
-            }
+    private void clickTile(ActionEvent event) { 
+        Integer row = GridPane.getRowIndex((Node) event.getSource());
+        Integer col = GridPane.getColumnIndex((Node) event.getSource());
+
+
+        Integer row2 = GridPane.getRowIndex(n);
+        Integer col2 = GridPane.getColumnIndex(n);
+
+
+        ObservableList<Node> mainGridChildren = MainGrid.getChildren();
+        ObservableList<Node> subGridChildren = subGrid.getChildren();
+        int index = 0;
+        for (Node node : mainGridChildren) {
+            if( GridPane.getRowIndex(node) == row2 && GridPane.getColumnIndex(node) == col2 ){
+
+                GridPane smallGrid = (GridPane) node;
+                ObservableList<Node> smallGridChrildren = smallGrid.getChildren();
+                   
+                for (Node node1 : smallGridChrildren) {
+                    if( GridPane.getRowIndex(node1) == row && GridPane.getColumnIndex(node1) == col) {
+                    Button b = (Button) node1;
                     
-        }
-            
-            
+                    b.setFont(Font.font(32));
+                    b.setText(XorO);
+                    Button button = (Button) subGridChildren.get(index);
+                    button.setFont(Font.font(30));
+                    button.setText(XorO);
+                    
+                    if ("X".equals(XorO)) //just to swithfrom X to O 
+                        XorO = "O";       //will be deleted later because we have to use the interfaces
+                    else
+                        XorO = "X";
+                    break;
+                    }
+                    index++;
+                }   
+                break;
+            }
+        }        
     }
 
-    void setGm(GameManager.GameMode gameMode) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setGm(GameManager.GameMode gameMode) {
+        
     }
 
 
