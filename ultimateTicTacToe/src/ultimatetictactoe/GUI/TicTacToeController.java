@@ -21,7 +21,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
-import sun.security.x509.X400Address;
 import ultimatetictactoe.BLL.GameManager;
 
 /**
@@ -31,6 +30,7 @@ import ultimatetictactoe.BLL.GameManager;
 public class TicTacToeController implements Initializable {
 
     GameManager gm;
+    Model model;
     
     private Node parentNode; // variable to save its parent
     
@@ -221,6 +221,8 @@ sed needs to be deleted*/
                     if( GridPane.getRowIndex(node1) == row && GridPane.getColumnIndex(node1) == col) {
                     Button b = (Button) node1;
                     
+                    model.move(row2, col2);
+                    
                     b.setFont(Font.font(32));
                     b.setText(XorO);
                     Button button = (Button) subGridChildren.get(index);
@@ -240,10 +242,13 @@ sed needs to be deleted*/
         }        
     }
 
-    public void setGm(GameManager gm) {
-        this.gm = gm;
+
+    void setModel(Model model) {
+        this.model = model;
     }
-
-
+    
+    public void clearBoard() {
+   
+    }
     
 }

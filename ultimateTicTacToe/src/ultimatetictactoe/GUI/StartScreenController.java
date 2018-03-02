@@ -24,6 +24,7 @@ import ultimatetictactoe.BLL.GameState;
  * @author Yindo
  */
 public class StartScreenController implements Initializable {
+    Model model = new Model();
     
 
     /**
@@ -40,7 +41,8 @@ public class StartScreenController implements Initializable {
         TicTacToeController ttc = new TicTacToeController();
        
         GameManager gm = new GameManager(new GameState());
-        ttc.setGm(gm);
+        ttc.setModel(model);
+        model.setGm(gm);
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         
